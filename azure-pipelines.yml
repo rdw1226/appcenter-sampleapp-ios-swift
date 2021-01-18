@@ -31,7 +31,7 @@ steps:
   inputs:
     serverEndpoint: 'App Center'
     appSlug: 'KevinApps/AppCenterDemo-iOS'
-    appFile: '$(Build.ArtifactStagingDirectory)/*.ipa'
+    appFile: '**/*.ipa'
     releaseNotesOption: 'input'
     releaseNotesInput: 'test'
     destinationType: 'groups'
