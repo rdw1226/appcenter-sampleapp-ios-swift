@@ -25,3 +25,14 @@ steps:
     xcodeDeveloperDir: '/Applications/Xcode_11.3.app'
     packageApp: false
     publishJUnitResults: true
+    
+    
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'App Center'
+    appSlug: 'KevinApps/AppCenterDemo-iOS'
+    appFile: '$(Build.ArtifactStagingDirectory)/*.ipa'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'test'
+    destinationType: 'groups'
+    distributionGroupId: 'e6f20ff1-c27e-41f1-aa84-ef4d2d9078e3'
