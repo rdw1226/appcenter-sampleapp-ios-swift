@@ -25,7 +25,18 @@ steps:
     xcodeDeveloperDir: '/Applications/Xcode_11.3.app'
     packageApp: false
     publishJUnitResults: true
-    
+  
+- task: CopyFiles@2
+  inputs:
+    contents: '**/*.app'
+    targetFolder: '$(build.artifactStagingDirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(build.artifactStagingDirectory)'
+    artifactName: 'outputs'
+    artifactType: 'container'
+
     
 - task: AppCenterDistribute@3
   inputs:
