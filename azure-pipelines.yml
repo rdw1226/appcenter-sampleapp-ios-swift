@@ -31,7 +31,7 @@ steps:
   inputs:
     serverEndpoint: 'App Center'
     appSlug: 'KevinApps/AppCenterDemo-iOS'
-    appFile: '$(System.DefaultWorkingDirectory)/*.ipa'
+    appFile: '$(System.DefaultWorkingDirectory)/*.app'
     releaseNotesOption: 'input'
     releaseNotesInput: 'test'
     destinationType: 'groups'
